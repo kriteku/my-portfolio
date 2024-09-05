@@ -1,0 +1,671 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-bar {
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    height: fit-content;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1;
+    background-color: none;
+    transition: 0.5s;
+}
+
+#nav-bar.hide {
+    transform: translateY(-100%);
+}
+
+#nav-bar.show {
+    transform: translateY(0);
+}
+
+#links-div {
+    display: flex;
+    flex-direction: row;
+}
+
+#logo-div,
+#our-blogs-div,
+#involved-div,
+#imp-div {
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    margin: 0px 18px;
+}
+
+#logo {
+    margin: 10px;
+    aspect-ratio: 32/9;
+    object-fit: contain;
+    font-family: 'Allison';
+    color: white;
+    font-size: 3em;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+#about,
+#our-work,
+#involved,
+#impact,
+#about-me {
+    font-size: 25px;
+    font-family: monospace;
+    color: white;
+}
+
+#about-link,
+#our-work-link,
+#involved-link,
+#impact-link,
+#about-me-link {
+    text-decoration: none;
+    color: black;
+}
+
+#about-us:hover {
+    cursor: pointer;
+}
+
+#main-body {
+    width: 100%;
+    height: fit-content;
+    margin-top: -90px;
+    background-size: 80px 80px;
+    background-image:
+        linear-gradient(to right, rgb(58, 58, 58) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(58, 58, 58) 1px, transparent 1px);
+    background-color: black;
+}
+
+#banner-img-div img,
+#banner-img-div-mobile img {
+    height: 100vh;
+}
+
+#banner-img-div {
+    background-image: radial-gradient(circle at center, lime, #000000 80%);
+}
+
+#banner-text-div {
+    display: flex;
+    justify-content: left;
+    margin-left: 50px;
+    flex-direction: column;
+    margin-top: 15%;
+    min-width: 30%;
+}
+
+#banner-image {
+    width: 100%;
+    margin-top: 90px;
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+#intro-text {
+    color: white;
+    font-family: monospace;
+    text-align: left;
+    font-size: 16px;
+}
+
+#media-icons-div {
+    color: white;
+    font-size: 20px;
+    align-self: center;
+    margin: 30px 0px;
+}
+
+i {
+    margin: 0px 8px;
+    cursor: pointer;
+}
+
+#resume-button {
+    background-color: transparent;
+    border: 1px solid white;
+    cursor: pointer;
+    font-family: monospace;
+    padding: 5px 10px;
+    color: white;
+    transition: 0.2s;
+    margin-bottom: 50px;
+}
+
+#resume-button:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    transition: 0.2s;
+}
+
+#about-text-div {
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    border: 1px solid rgb(47, 79, 79);
+    background-color: #052128;
+}
+
+#about-img-one {
+    width: 400px;
+    margin: 50px;
+}
+
+#about-img-two {
+    display: none;
+}
+
+#about-text {
+    margin: 0px 50px;
+    text-align: center;
+}
+
+.tech-header,
+#about-me-header {
+    font-family: monospace;
+    color: white;
+    font-size: 1.8em;
+    margin: 50px 0px;
+}
+
+#about-me-header {
+    text-align: center;
+}
+
+#portfolio-div,
+#tech-skills-outer-div,
+.tech-skills-div,
+#project-div,
+#about-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-div {
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+}
+
+
+#work-exp-header,
+#tech-skills-header,
+#project-header,
+#about-header {
+    font-family: monospace;
+    margin: 50px 0px;
+    font-size: 2em;
+    font-weight: 400;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    background-color: black;
+}
+
+#work-exp-div,
+#outermost-project-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+}
+
+#outermost-project-div {
+    flex-wrap: wrap;
+    width: 95%;
+}
+
+.work-div,
+.projects-div {
+    margin: 50px 20px;
+    border: 1px solid rgb(47, 79, 79);
+    width: 100%;
+    padding: 50px;
+    overflow: hidden;
+    background-color: #052128;
+    border-radius: 20px;
+}
+
+.projects-div {
+    width: 47%;
+}
+
+.animate {
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+}
+
+#role-header-1,
+#role-header-2,
+#project-header-1,
+#project-header-2,
+#project-header-3,
+#project-header-4,
+#project-header-5 {
+    font-family: monospace;
+    color: lime;
+    font-size: 1.5em;
+    margin-top: 8px;
+    width: 35.8ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 10px solid;
+}
+
+#role-header-2 {
+    width: 13.9ch;
+}
+
+#project-header-1 {
+    width: 28.7ch;
+}
+
+#project-header-2 {
+    width: 80ch;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#project-header-2::-webkit-scrollbar {
+    display: none;
+}
+
+#project-header-3 {
+    width: 53.1ch;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#project-header-3::-webkit-scrollbar {
+    display: none;
+}
+
+#project-header-4 {
+    width: 16.7ch;
+}
+
+#project-header-5 {
+    width: 30.7ch;
+}
+
+.company-header,
+.duration-header {
+    font-family: monospace;
+    color: white;
+    font-size: 1.3em;
+    font-style: oblique;
+}
+
+.info-div,
+.project-info-div {
+    height: 0px;
+    overflow: hidden;
+    transition: all 3s ease-in-out;
+    margin-top: 5px;
+}
+
+.info-div-height {
+    height: 12.4em;
+    transition: all 1s ease-in-out;
+}
+
+.project-info-div-height {
+    height: 41em;
+    transition: all 3s ease-in-out;
+}
+
+.work-info,
+.projects-info,
+#about-text {
+    font-family: monospace;
+    color: white;
+    font-size: 1.1em;
+    margin-left: -17px;
+    list-style-type: square;
+}
+
+#about-text {
+    font-size: 1.1em;
+    margin-left: 0px;
+}
+
+.horztl-line {
+    width: 99%;
+    background-color: white;
+}
+
+#tech-skills-table {
+    font-family: monospace;
+    color: white;
+    font-size: 1.5em;
+    width: 93%;
+}
+
+#tech-skills-table tr {
+    height: 280px;
+}
+
+.tech-images-outer-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tech-images {
+    width: 100px;
+    margin: 0px 20px;
+
+}
+
+.tech-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0px;
+}
+
+.outermost-tech-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-text {
+    margin: 20px 0px;
+    font-family: monospace;
+    font-size: 1.2em;
+    color: white;
+}
+
+#vertical-line {
+    border: 1px solid gray;
+    height: 500px;
+}
+
+.project-header-div,
+.work-header-div {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.projects-h3 {
+    font-family: monospace;
+    color: white;
+    font-size: 1.1em;
+}
+
+.projects-span {
+    font-family: monospace;
+    color: white;
+    font-weight: bold;
+}
+
+#banner-img-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 981px) {
+    #logo {
+        font-size: 1.8em;
+    }
+
+    #banner-img-div {
+        display: none;
+    }
+
+    #about,
+    #our-work,
+    #involved,
+    #impact,
+    #about-me {
+        font-size: 0.8em;
+        margin: 0px -10px;
+    }
+
+    #banner-text-div {
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px;
+        transform: translate(0, -100%);
+        top: 50%;
+        position: absolute;
+        z-index: 0;
+    }
+
+    #banner-img-div-mobile {
+        background-image: radial-gradient(circle at center, rgb(0, 132, 0), #000000 80%);
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 100%;
+    }
+
+    #banner-img-mobile {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        z-index: 0;
+        position: relative;
+    }
+
+    #intro-text {
+        text-align: center;
+        font-size: 0.9em;
+        padding: 0px 15px;
+    }
+
+    #media-icons-div,
+    #resume-button {
+        align-self: center;
+        font-size: 1em;
+        background-color: transparent;
+        border: 1px solid white;
+    }
+
+    #media-icons-div {
+        border: none;
+    }
+
+    #resume-button {
+        margin-bottom: 30px;
+    }
+
+    #work-exp-div,
+    #outermost-project-div {
+        flex-direction: column;
+    }
+
+    .work-div,
+    .projects-div,
+    #about-div {
+        width: 90%;
+        padding: 20px;
+        margin: 25px 0px;
+        margin-top: 0px;
+    }
+
+    #about-div {
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 96%;
+    }
+
+    #about-img-one {
+        display: none;
+    }
+
+    #about-img-two {
+        display: flex;
+        width: 100%;
+    }
+
+    #about-text {
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin: 0px 25px;
+    }
+
+    #work-exp-header,
+    #tech-skills-header,
+    #project-header {
+        font-size: 1.5em;
+    }
+
+    .work-header-div,
+    .project-header-div {
+        font-size: 0.8em;
+    }
+
+    #role-header-1,
+    #project-header-1,
+    #project-header-2,
+    #project-header-3,
+    #project-header-4,
+    #project-header-5 {
+        overflow-x: scroll;
+    }
+
+    #role-header-1::-webkit-scrollbar,
+    #project-header-1::-webkit-scrollbar,
+    #project-header-2::-webkit-scrollbar,
+    #project-header-3::-webkit-scrollbar,
+    #project-header-4::-webkit-scrollbar,
+    #project-header-5::-webkit-scrollbar {
+        display: none;
+    }
+
+    .company-header,
+    .duration-header {
+        font-size: 1em;
+    }
+
+    .work-info,
+    .projects-info {
+        font-size: 1em;
+    }
+
+    .info-div-height {
+        height: 16.8em;
+
+    }
+
+    .project-info-div-height {
+        height: 57em;
+    }
+
+    .tech-header {
+        font-size: 1.2em;
+        margin: 20px;
+    }
+
+    .tech-images {
+        width: 50px;
+    }
+
+    .tech-images-outer-div {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .tech-text {
+        font-size: 1em;
+    }
+
+    .outermost-tech-div {
+        flex-wrap: wrap;
+    }
+
+    .projects-h3 {
+        font-size: 1em;
+    }
+
+}
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+    #intro-text {
+        font-size: 14px;
+    }
+
+    .info-div-height {
+        height: 12.2em;
+    }
+
+    .project-info-div-height {
+        height: 44em;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+    #intro-text {
+        font-size: 12px;
+    }
+
+    .info-div-height {
+        height: 15.5em;
+    }
+
+    .project-info-div-height {
+        height: 50.5em;
+    }
+}
+
+@media (max-width: 1201px) and (min-width: 901px) {
+    #intro-text {
+        font-size: 10px;
+    }
+
+    .info-div-height {
+        height: 18.8em;
+    }
+
+    .project-info-div-height {
+        height: 58.7em;
+    }
+}
