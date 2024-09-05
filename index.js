@@ -4,8 +4,7 @@ window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
         navBar.style.backgroundColor = "black";
         navBar.style.transition = "0.5s";
-    }
-    else {
+    } else {
         navBar.style.backgroundColor = "";
         navBar.style.transition = "0.5s";
     }
@@ -28,7 +27,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, {
     root: null,
-    threshold: 0.1 
+    threshold: 0.1
 });
 
 headers.forEach((header) => {
@@ -46,32 +45,14 @@ const observerInfo = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    root: null, 
-    threshold: 0.1 
+    root: null,
+    threshold: 0.1
 });
 
 infoDivs.forEach((infoDiv) => {
     observerInfo.observe(infoDiv);
 });
 
-const projectInfoDivs = document.querySelectorAll('.project-info-div');
-const projectObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('project-info-div-height');
-        }
-        else {
-            entry.target.classList.remove('project-info-div-height');
-        }
-})
-}, {
-    root: null,
-    threshold: 0.1
-});
-
-projectInfoDivs.forEach((infoDiv) => {
-    projectObserver.observe(infoDiv);
-});
 
 const navbar = document.getElementById('nav-bar');
 
@@ -146,8 +127,8 @@ const button = document.getElementById('resume-button');
 const pdfFile = 'pdf/kritek_2024[1].pdf';
 
 button.addEventListener('click', () => {
-  const link = document.createElement('a');
-  link.href = pdfFile;
-  link.download = 'resume.pdf';
-  link.click();
+    const link = document.createElement('a');
+    link.href = pdfFile;
+    link.download = 'resume.pdf';
+    link.click();
 });

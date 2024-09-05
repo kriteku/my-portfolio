@@ -100,9 +100,7 @@ body {
     height: fit-content;
     margin-top: -90px;
     background-size: 80px 80px;
-    background-image:
-        linear-gradient(to right, rgb(58, 58, 58) 1px, transparent 1px),
-        linear-gradient(to bottom, rgb(58, 58, 58) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgb(58, 58, 58) 1px, transparent 1px), linear-gradient(to bottom, rgb(58, 58, 58) 1px, transparent 1px);
     background-color: black;
 }
 
@@ -225,7 +223,6 @@ i {
     width: 80%;
 }
 
-
 #work-exp-header,
 #tech-skills-header,
 #project-header,
@@ -344,14 +341,13 @@ i {
     margin-top: 5px;
 }
 
+.project-info-div {
+    height: 41em;
+}
+
 .info-div-height {
     height: 12.4em;
     transition: all 1s ease-in-out;
-}
-
-.project-info-div-height {
-    height: 41em;
-    transition: all 3s ease-in-out;
 }
 
 .work-info,
@@ -394,7 +390,6 @@ i {
 .tech-images {
     width: 100px;
     margin: 0px 20px;
-
 }
 
 .tech-div {
@@ -453,11 +448,9 @@ i {
     #logo {
         font-size: 1.8em;
     }
-
     #banner-img-div {
         display: none;
     }
-
     #about,
     #our-work,
     #involved,
@@ -466,7 +459,6 @@ i {
         font-size: 0.8em;
         margin: 0px -10px;
     }
-
     #banner-text-div {
         align-items: center;
         justify-content: center;
@@ -476,7 +468,6 @@ i {
         position: absolute;
         z-index: 0;
     }
-
     #banner-img-div-mobile {
         background-image: radial-gradient(circle at center, rgb(0, 132, 0), #000000 80%);
         left: 0;
@@ -484,7 +475,6 @@ i {
         margin: auto;
         width: 100%;
     }
-
     #banner-img-mobile {
         display: flex;
         width: 100%;
@@ -492,13 +482,11 @@ i {
         z-index: 0;
         position: relative;
     }
-
     #intro-text {
         text-align: center;
         font-size: 0.9em;
         padding: 0px 15px;
     }
-
     #media-icons-div,
     #resume-button {
         align-self: center;
@@ -506,20 +494,16 @@ i {
         background-color: transparent;
         border: 1px solid white;
     }
-
     #media-icons-div {
         border: none;
     }
-
     #resume-button {
         margin-bottom: 30px;
     }
-
     #work-exp-div,
     #outermost-project-div {
         flex-direction: column;
     }
-
     .work-div,
     .projects-div,
     #about-div {
@@ -528,41 +512,34 @@ i {
         margin: 25px 0px;
         margin-top: 0px;
     }
-
     #about-div {
         left: 0;
         right: 0;
         margin: auto;
         width: 96%;
     }
-
     #about-img-one {
         display: none;
     }
-
     #about-img-two {
         display: flex;
         width: 100%;
     }
-
     #about-text {
         left: 0;
         right: 0;
         margin: auto;
         margin: 0px 25px;
     }
-
     #work-exp-header,
     #tech-skills-header,
     #project-header {
         font-size: 1.5em;
     }
-
     .work-header-div,
     .project-header-div {
         font-size: 0.8em;
     }
-
     #role-header-1,
     #project-header-1,
     #project-header-2,
@@ -571,7 +548,6 @@ i {
     #project-header-5 {
         overflow-x: scroll;
     }
-
     #role-header-1::-webkit-scrollbar,
     #project-header-1::-webkit-scrollbar,
     #project-header-2::-webkit-scrollbar,
@@ -580,63 +556,49 @@ i {
     #project-header-5::-webkit-scrollbar {
         display: none;
     }
-
     .company-header,
     .duration-header {
         font-size: 1em;
     }
-
     .work-info,
     .projects-info {
         font-size: 1em;
     }
-
     .info-div-height {
         height: 16.8em;
-
     }
-
     .project-info-div-height {
         height: 57em;
     }
-
     .tech-header {
         font-size: 1.2em;
         margin: 20px;
     }
-
     .tech-images {
         width: 50px;
     }
-
     .tech-images-outer-div {
         align-items: center;
         justify-content: center;
     }
-
     .tech-text {
         font-size: 1em;
     }
-
     .outermost-tech-div {
         flex-wrap: wrap;
     }
-
     .projects-h3 {
         font-size: 1em;
     }
-
 }
 
 @media (min-width: 1300px) and (max-width: 1400px) {
     #intro-text {
         font-size: 14px;
     }
-
     .info-div-height {
         height: 12.2em;
     }
-
     .project-info-div-height {
         height: 44em;
     }
@@ -646,11 +608,9 @@ i {
     #intro-text {
         font-size: 12px;
     }
-
     .info-div-height {
         height: 15.5em;
     }
-
     .project-info-div-height {
         height: 50.5em;
     }
@@ -660,11 +620,9 @@ i {
     #intro-text {
         font-size: 10px;
     }
-
     .info-div-height {
         height: 18.8em;
     }
-
     .project-info-div-height {
         height: 58.7em;
     }
