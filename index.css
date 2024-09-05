@@ -567,6 +567,9 @@ i {
     .info-div-height {
         height: 16.8em;
     }
+    .project-info-div {
+        height: fit-content;
+    }
     .project-info-div-height {
         height: 57em;
     }
