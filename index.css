@@ -216,6 +216,10 @@ i {
     justify-content: center;
 }
 
+#portfolio-div {
+    height: 800px;
+}
+
 #about-div {
     left: 0;
     right: 0;
