@@ -15,25 +15,6 @@ logo.addEventListener("click", () => {
     window.scrollTo(0, 0);
 });
 
-const headers = document.querySelectorAll('.role-header, .projects-header');
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-        } else {
-            entry.target.classList.remove('animate');
-        }
-    });
-}, {
-    root: null,
-    threshold: 0.1
-});
-
-headers.forEach((header) => {
-    observer.observe(header);
-});
-
 const infoDivs = document.querySelectorAll('.info-div');
 
 const observerInfo = new IntersectionObserver((entries) => {
@@ -55,29 +36,6 @@ infoDivs.forEach((infoDiv) => {
 
 
 const navbar = document.getElementById('nav-bar');
-
-// In case you want to hide the navigation bar while scrolling uncomment the below code
-// let prevScrollPos = window.pageYOffset;
-// let isScrollingDown = false;
-
-// window.addEventListener('scroll', () => {
-//     const currentScrollPos = window.pageYOffset;
-
-//     if (currentScrollPos > prevScrollPos) {
-//         isScrollingDown = true;
-//     } else {
-//         isScrollingDown = false;
-//     }
-
-//     if (isScrollingDown) {
-//         navbar.classList.add('hide');
-//         navbar.classList.remove('show');
-//     } else {
-//         navbar.classList.add('show');
-//         navbar.classList.remove('hide');
-//     }
-//     prevScrollPos = currentScrollPos;
-// });
 
 const txt = "I'm a Software Engineer with 2+ years in Data Science and Web Development. I'm passionate about solving problems and eager to contribute to innovative projects.";
 const speed = 10;
